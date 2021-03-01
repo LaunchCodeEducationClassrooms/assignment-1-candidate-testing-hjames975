@@ -23,12 +23,13 @@ let correctAnswers = [
   "3"
 ];
 let candidateAnswers = [];
+let questionNumber = 0;
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
-let candidateName = input.question("What is your name? \n");
+let candidateName = input.question("What is your name? ");
 console.log(`Candidate Name: ${candidateName}`);
 }
 
@@ -36,7 +37,9 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
   for(let i = 0; i < questions.length; i ++){
-    candidateAnswers.push(input.question(questions[i]));
+     questionNumber++;
+    //console.log(`${questionNumber}) ${questions[i]}`);
+    candidateAnswers.push(input.question(`${questionNumber}) ${questions[i]} `));
     console.log(`Your answer: ${candidateAnswers[i]}`);
     console.log(`Correct answer: ${correctAnswers[i]}\n`);
     //if(candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
