@@ -17,7 +17,7 @@ let questions = [
 ];
 let correctAnswers = [
   "Sally Ride", 
-  "True",
+  "true",
   "40",
   "Trajectory",
   "3"
